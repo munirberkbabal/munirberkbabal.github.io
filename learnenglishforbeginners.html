@@ -3,40 +3,69 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Learn English for Beginners</title>
+  <title>Mobil Uygulamam</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Özel Stil -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Uygulama Logosu">
+  <!-- Header -->
+  <header class="bg-purple text-white text-center py-5">
+    <div class="container">
+      <img src="logo.png" alt="Uygulama Logosu" class="logo mb-3" width="100">
+      <h1 class="display-4">Mobil Uygulamam</h1>
+      <a href="https://play.google.com/store/apps/details?id=com.example.uygulama" class="btn btn-pink btn-lg">Uygulamayı İndir</a>
     </div>
-    <h1>Learn English for Beginners</h1>
-    <a href="example.com" class="download-button">Uygulamayı İndir</a>
   </header>
 
-  <section class="slider">
-    <div class="slides">
-      <img src="image1.jpg" alt="Uygulama Görseli 1" class="slide active">
-      <img src="image2.jpg" alt="Uygulama Görseli 2" class="slide">
-      <img src="image3.jpg" alt="Uygulama Görseli 3" class="slide">
+  <!-- Slider -->
+  <section class="slider py-5">
+    <div class="container">
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="image1.jpg" class="d-block w-100" alt="Uygulama Görseli 1">
+          </div>
+          <div class="carousel-item">
+            <img src="image2.jpg" class="d-block w-100" alt="Uygulama Görseli 2">
+          </div>
+          <div class="carousel-item">
+            <img src="image3.jpg" class="d-block w-100" alt="Uygulama Görseli 3">
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Önceki</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sonraki</span>
+        </button>
+      </div>
     </div>
-    <button class="prev" onclick="prevSlide()">&#10094;</button>
-    <button class="next" onclick="nextSlide()">&#10095;</button>
   </section>
 
-  <section class="about">
-    <h2>Hakkında</h2>
-    <p>
-      Learn English for Beginners isimli mobil uygulama projemiz, İngilizce öğrenmek isteyenler için tasarlanmıştır. 
-      Kolay kullanımı ve etkili öğrenme yöntemleriyle dikkat çekmektedir.
-    </p>
+  <!-- Hakkında Bölümü -->
+  <section class="about py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Hakkında</h2>
+      <p class="text-center">
+        Mobil uygulamam, İngilizce öğrenmek isteyenler için tasarlanmıştır. 
+        Kolay kullanımı ve etkili öğrenme yöntemleriyle dikkat çekmektedir.
+      </p>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2023 Learn English for Beginners. Tüm hakları saklıdır.</p>
+  <!-- Footer -->
+  <footer class="bg-purple text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2023 Mobil Uygulamam. Tüm hakları saklıdır.</p>
+    </div>
   </footer>
 
-  <script src="scripts.js"></script>
+  <!-- Bootstrap JS ve Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
