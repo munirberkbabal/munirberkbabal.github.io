@@ -8,32 +8,33 @@
 </head>
 <body>
   <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
-    </div>
-    <h1>Projelerim</h1>
+    <nav class="navbar">
+      <div class="logo">
+        <img src="logo.png" alt="Logo">
+      </div>
+      <ul class="nav-links">
+        <li><a href="#">Ana Sayfa</a></li>
+        <li class="dropdown">
+          <a href="#" class="dropbtn">Mobil Uygulamalar</a>
+          <div class="dropdown-content">
+            <a href="app1.html">İngilizce Öğrenme Uygulaması</a>
+            <a href="app2.html">Diğer Uygulama</a>
+          </div>
+        </li>
+        <li><a href="#">Hakkında</a></li>
+      </ul>
+    </nav>
   </header>
 
   <section class="projects">
-    <h2>Hoş Geldiniz!</h2>
+    <h1>Hoş Geldiniz!</h1>
     <p>
-      Bu sayfada geliştirdiğim projeleri paylaşıyorum. Mobil uygulamalarımı aşağıdan seçebilirsiniz.
+      Bu sayfada geliştirdiğim projeleri paylaşıyorum. Mobil uygulamalarımı yukarıdaki menüden seçebilirsiniz.
     </p>
-
-    <div class="app-selector">
-      <label for="app-select">Mobil Uygulama Seçin:</label>
-      <select id="app-select" onchange="goToApp()">
-        <option value="">-- Uygulama Seçin --</option>
-        <option value="app1.html">İngilizce Öğrenme Uygulaması</option>
-        <option value="app2.html">Diğer Uygulama</option>
-      </select>
-    </div>
   </section>
 
   <footer>
     <p>&copy; 2023 Projelerim. Tüm hakları saklıdır.</p>
   </footer>
-
-  <script src="scripts.js"></script>
 </body>
 </html>
