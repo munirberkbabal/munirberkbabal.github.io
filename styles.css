@@ -11,61 +11,61 @@ body {
 header {
   background-color: #6a1b9a; /* Mor tema */
   color: white;
-  padding: 40px 20px;
+  padding: 20px;
 }
 
 header .logo img {
-  width: 100px;
+  width: 80px;
   height: auto;
 }
 
 h1 {
   margin: 10px 0 0;
-  font-size: 2.5rem;
+  font-size: 2rem;
 }
 
 header p {
   margin: 5px 0 0;
-  font-size: 1.2rem;
+  font-size: 1rem;
 }
 
 /* Hakkında Bölümü */
 .about {
-  padding: 20px;
+  padding: 15px;
   background-color: white;
-  margin: 20px;
+  margin: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .about h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .about p {
-  font-size: 1rem;
+  font-size: 0.9rem;
   line-height: 1.6;
 }
 
 /* CTA (Call to Action) Bölümü */
 .cta {
-  padding: 20px;
+  padding: 15px;
   background-color: #6a1b9a; /* Mor tema */
   color: white;
-  margin: 20px;
+  margin: 15px;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .cta h2 {
-  font-size: 2rem;
+  font-size: 1.5rem;
   margin-bottom: 10px;
 }
 
 .cta p {
-  font-size: 1rem;
-  margin-bottom: 20px;
+  font-size: 0.9rem;
+  margin-bottom: 15px;
 }
 
 .cta-button {
@@ -75,7 +75,7 @@ header p {
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 1.2rem;
+  font-size: 1rem;
   transition: background-color 0.3s ease;
 }
 
@@ -86,8 +86,8 @@ header p {
 /* Slider Stili (Mobil Uygulama Sayfası) */
 .slider {
   position: relative;
-  max-width: 800px;
-  margin: 20px auto;
+  max-width: 100%;
+  margin: 15px auto;
   overflow: hidden;
   border-radius: 10px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
@@ -124,6 +124,7 @@ header p {
   padding: 10px;
   cursor: pointer;
   border-radius: 50%;
+  font-size: 1.5rem;
 }
 
 .prev {
@@ -143,4 +144,69 @@ footer {
   position: fixed;
   bottom: 0;
   width: 100%;
+}
+
+/* Mobil Uyumlu Tasarım */
+@media (max-width: 768px) {
+  header .logo img {
+    width: 60px;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+
+  header p {
+    font-size: 0.9rem;
+  }
+
+  .about h2, .cta h2 {
+    font-size: 1.2rem;
+  }
+
+  .about p, .cta p {
+    font-size: 0.8rem;
+  }
+
+  .cta-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .prev, .next {
+    font-size: 1.2rem;
+    padding: 8px;
+  }
+}
+
+@media (max-width: 480px) {
+  header .logo img {
+    width: 50px;
+  }
+
+  h1 {
+    font-size: 1.2rem;
+  }
+
+  header p {
+    font-size: 0.8rem;
+  }
+
+  .about h2, .cta h2 {
+    font-size: 1rem;
+  }
+
+  .about p, .cta p {
+    font-size: 0.7rem;
+  }
+
+  .cta-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .prev, .next {
+    font-size: 1rem;
+    padding: 6px;
+  }
 }
