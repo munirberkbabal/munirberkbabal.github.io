@@ -1,15 +1,29 @@
-// Alt menüyü açıp kapatmak için
-const mobileAppsBtn = document.getElementById('mobile-apps-btn');
-const mobileAppsMenu = document.getElementById('mobile-apps-menu');
+let currentSlide = 0;
 
-mobileAppsBtn.addEventListener('click', (e) => {
-  e.preventDefault(); // Sayfanın yenilenmesini engelle
-  mobileAppsMenu.style.display = mobileAppsMenu.style.display === 'block' ? 'none' : 'block';
-});
-
-// Sayfanın herhangi bir yerine tıklandığında menüyü kapat
-document.addEventListener('click', (e) => {
-  if (!e.target.closest('.dropdown')) {
-    mobileAppsMenu.style.display = 'none';
+function showSlide(index) {
+  const slides = document.querySelectorAll('.slide');
+  if (index >= slides.length) {
+    currentSlide = 0;
+  } else if (index < 0) {
+    currentSlide = slides.length - 1;
+  } else {
+    currentSlide = index;
   }
-});
+  slides.forEach((slide, i) => {
+    slide.classList.remove('active');
+    if (i === currentSlide) {
+      slide.classList.add('active');
+    }
+  });
+}
+
+function nextSlide() {
+  showSlide(currentSlide + 1);
+}
+
+function prevSlide() {
+  showSlide(currentSlide - 1);
+}
+
+// Otomatik slider geçişi
+setInterval(nextSlide, 5000);
