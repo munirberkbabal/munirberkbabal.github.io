@@ -4,35 +4,52 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Münir Berk BABAL</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Özel Stil -->
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
+  <!-- Header -->
+  <header class="bg-purple text-white text-center py-5">
+    <div class="container">
+      <img src="logo.png" alt="Logo" class="logo mb-3" width="100">
+      <h1 class="display-4">Münir Berk BABAL</h1>
+      <p class="lead">Yazılım Geliştirici & Mobil Uygulama Tasarımcısı</p>
     </div>
-    <h1>Münir Berk BABAL</h1>
-    <p>Yönetim Bilişim Uzmanı</p>
   </header>
 
-  <section class="about">
-    <h2>Ben Kimim?</h2>
-    <p>
-      Merhaba! Ben Münir Berk BABAL. Yönetim bilişim uzmanıyım. 
-      Birtakım projeler yaratarak insanların hayatını kolaylaştırmayı hedefliyorum.
-    </p>
+  <!-- Hakkında Bölümü -->
+  <section class="about py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Hakkımda</h2>
+      <p class="text-center">
+        Merhaba! Ben Münir Berk BABAL. Yazılım geliştirme ve mobil uygulama tasarımı konularında uzmanım. 
+        Geliştirdiğim uygulamalarla kullanıcıların hayatını kolaylaştırmayı hedefliyorum.
+      </p>
+    </div>
   </section>
 
-  <section class="cta">
-    <h2>Mobil Uygulamamı Keşfet</h2>
-    <p>
-      Geliştirdiğim mobil uygulamayı incelemek ve indirmek için aşağıdaki butona tıklayın.
-    </p>
-    <a href="learnenglishforbeginners.html" class="cta-button">Uygulamaya Git</a>
+  <!-- CTA (Call to Action) Bölümü -->
+  <section class="cta bg-purple text-white py-5">
+    <div class="container text-center">
+      <h2 class="mb-4">Mobil Uygulamamı Keşfet</h2>
+      <p class="mb-4">
+        Geliştirdiğim mobil uygulamayı incelemek ve indirmek için aşağıdaki butona tıklayın.
+      </p>
+      <a href="mobil-uygulama.html" class="btn btn-pink btn-lg">Uygulamaya Git</a>
+    </div>
   </section>
 
-  <footer>
-    <p>&copy; 2023 Münir Berk BABAL. Tüm hakları saklıdır.</p>
+  <!-- Footer -->
+  <footer class="bg-purple text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2023 Münir Berk BABAL. Tüm hakları saklıdır.</p>
+    </div>
   </footer>
+
+  <!-- Bootstrap JS ve Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
