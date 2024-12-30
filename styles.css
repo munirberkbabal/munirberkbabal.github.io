@@ -5,13 +5,13 @@ body {
   padding: 0;
   background-color: #f4f4f4;
   color: #333;
+  text-align: center;
 }
 
 header {
   background-color: #6a1b9a; /* Mor tema */
   color: white;
-  padding: 20px;
-  text-align: center;
+  padding: 40px 20px;
 }
 
 header .logo img {
@@ -21,26 +21,69 @@ header .logo img {
 
 h1 {
   margin: 10px 0 0;
+  font-size: 2.5rem;
 }
 
-/* İndir Butonu */
-.download-button {
+header p {
+  margin: 5px 0 0;
+  font-size: 1.2rem;
+}
+
+/* Hakkında Bölümü */
+.about {
+  padding: 20px;
+  background-color: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.about p {
+  font-size: 1rem;
+  line-height: 1.6;
+}
+
+/* CTA (Call to Action) Bölümü */
+.cta {
+  padding: 20px;
+  background-color: #6a1b9a; /* Mor tema */
+  color: white;
+  margin: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.cta h2 {
+  font-size: 2rem;
+  margin-bottom: 10px;
+}
+
+.cta p {
+  font-size: 1rem;
+  margin-bottom: 20px;
+}
+
+.cta-button {
   display: inline-block;
-  margin-top: 15px;
   padding: 10px 20px;
   background-color: #ff4081; /* Pembe renk */
   color: white;
   text-decoration: none;
   border-radius: 5px;
-  font-size: 16px;
+  font-size: 1.2rem;
   transition: background-color 0.3s ease;
 }
 
-.download-button:hover {
+.cta-button:hover {
   background-color: #e91e63; /* Hover rengi */
 }
 
-/* Slider Stili */
+/* Slider Stili (Mobil Uygulama Sayfası) */
 .slider {
   position: relative;
   max-width: 800px;
@@ -89,16 +132,6 @@ h1 {
 
 .next {
   right: 10px;
-}
-
-/* Hakkında Bölümü */
-.about {
-  padding: 20px;
-  text-align: center;
-  background-color: white;
-  margin: 20px;
-  border-radius: 10px;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 /* Footer */
