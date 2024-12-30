@@ -45,7 +45,7 @@ body {
 
 /* Açılır Menü Stili */
 .dropdown-content {
-  display: none;
+  display: none; /* Başlangıçta gizli */
   position: absolute;
   background-color: #6a1b9a; /* Mor tema */
   min-width: 160px;
@@ -62,10 +62,6 @@ body {
 
 .dropdown-content a:hover {
   background-color: #8e24aa; /* Hover rengi */
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 /* Projeler Bölümü */
