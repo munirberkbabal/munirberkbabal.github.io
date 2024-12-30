@@ -10,7 +10,7 @@
   <header>
     <nav class="navbar">
       <div class="logo">
-        <img src="logo.png" alt="Logo">
+        <img src="Logo.png" alt="Logo">
       </div>
       <ul class="nav-links">
         <li><a href="index.html">Ana Sayfa</a></li>
