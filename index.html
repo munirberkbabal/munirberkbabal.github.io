@@ -3,38 +3,37 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Projelerim</title>
+  <title>Mobil Uygulamam</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
   <header>
-    <nav class="navbar">
-      <div class="logo">
-        <img src="logo.png" alt="Logo">
-      </div>
-      <ul class="nav-links">
-        <li><a href="#">Ana Sayfa</a></li>
-        <li class="dropdown">
-          <a href="#" class="dropbtn" id="mobile-apps-btn">Mobil Uygulamalar</a>
-          <div class="dropdown-content" id="mobile-apps-menu">
-            <a href="learnenglishforbeginners.html">İngilizce Öğrenme Uygulaması</a>
-            <a href="anotherapp.html">Diğer Uygulama</a>
-          </div>
-        </li>
-        <li><a href="#">Hakkında</a></li>
-      </ul>
-    </nav>
+    <div class="logo">
+      <img src="logo.png" alt="Uygulama Logosu">
+    </div>
+    <h1>Mobil Uygulamam</h1>
   </header>
 
-  <section class="projects">
-    <h1>Hoş Geldiniz!</h1>
+  <section class="slider">
+    <div class="slides">
+      <img src="image1.jpg" alt="Uygulama Görseli 1" class="slide active">
+      <img src="image2.jpg" alt="Uygulama Görseli 2" class="slide">
+      <img src="image3.jpg" alt="Uygulama Görseli 3" class="slide">
+    </div>
+    <button class="prev" onclick="prevSlide()">&#10094;</button>
+    <button class="next" onclick="nextSlide()">&#10095;</button>
+  </section>
+
+  <section class="about">
+    <h2>Hakkında</h2>
     <p>
-      Bu sayfada geliştirdiğim projeleri paylaşıyorum.
+      Mobil uygulamam, İngilizce öğrenmek isteyenler için tasarlanmıştır. 
+      Kolay kullanımı ve etkili öğrenme yöntemleriyle dikkat çekmektedir.
     </p>
   </section>
 
   <footer>
-    <p>&copy; 2025 Münir Berk BABAL. Tüm hakları saklıdır.</p>
+    <p>&copy; 2023 Mobil Uygulamam. Tüm hakları saklıdır.</p>
   </footer>
 
   <script src="scripts.js"></script>
