@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Projelerim</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <header>
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+    </div>
+    <h1>Projelerim</h1>
+  </header>
+
+  <section class="projects">
+    <h2>Hoş Geldiniz!</h2>
+    <p>
+      Bu sayfada geliştirdiğim projeleri paylaşıyorum. Mobil uygulamalarımı aşağıdan seçebilirsiniz.
+    </p>
+
+    <div class="app-selector">
+      <label for="app-select">Mobil Uygulama Seçin:</label>
+      <select id="app-select" onchange="goToApp()">
+        <option value="">-- Uygulama Seçin --</option>
+        <option value="app1.html">İngilizce Öğrenme Uygulaması</option>
+        <option value="app2.html">Diğer Uygulama</option>
+      </select>
+    </div>
+  </section>
+
+  <footer>
+    <p>&copy; 2023 Projelerim. Tüm hakları saklıdır.</p>
+  </footer>
+
+  <script src="scripts.js"></script>
+</body>
+</html>
