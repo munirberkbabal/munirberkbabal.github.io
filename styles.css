@@ -30,7 +30,7 @@
 }
 
 .slider-image {
-  max-height: 400px; /* Slider resimlerinin maksimum yüksekliği */
+  max-height: 200px; /* Slider resimlerinin maksimum yüksekliği */
   width: auto; /* Genişliği otomatik ayarla */
   margin: 0 auto; /* Resimleri ortala */
   border-radius: 10px; /* Görsellerin köşelerini yuvarlar */
