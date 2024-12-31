@@ -19,7 +19,13 @@
   height: auto;
 }
 
-/* Slider Stili */
-.carousel-item img {
-  border-radius: 10px;
+.slider {
+  height: 60vh; /* Ekranın %60'ını kaplar */
 }
+
+.carousel-inner img {
+  max-height: 100%;
+  object-fit: cover; /* Görselleri ortalar ve taşmayı önler */
+  border-radius: 10px; /* Görsellerin köşelerini yuvarlar */
+}
+
