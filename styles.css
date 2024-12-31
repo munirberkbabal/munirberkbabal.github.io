@@ -30,11 +30,22 @@
   position: relative;
 }
 
+/* Resim Kapsayıcısı */
+.image-container {
+  width: 400px; /* Sabit genişlik */
+  height: 400px; /* Sabit yükseklik */
+  margin: 0 auto; /* Ortala */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden; /* Taşan kısımları gizle */
+  border-radius: 10px; /* Köşeleri yuvarlak yap */
+}
+
 .slider-image {
-  max-height: 800px; /* Slider resimlerinin maksimum yüksekliği */
-  width: auto; /* Genişliği otomatik ayarla */
-  margin: 0 auto; /* Resimleri ortala */
-  border-radius: 10px; /* Görsellerin köşelerini yuvarlar */
+  max-width: 100%; /* Resmin genişliği kapsayıcıya sığsın */
+  max-height: 100%; /* Resmin yüksekliği kapsayıcıya sığsın */
+  object-fit: cover; /* Resmi orantılı şekilde kırp */
 }
 
 .slider h2 {
@@ -109,8 +120,9 @@ footer {
     font-size: 1.5rem; /* Slider başlık boyutunu küçült */
   }
 
-  .slider-image {
-    max-height: 300px; /* Mobilde slider yüksekliğini azalt */
+  .image-container {
+    width: 300px; /* Mobilde kapsayıcı genişliğini küçült */
+    height: 300px; /* Mobilde kapsayıcı yüksekliğini küçült */
   }
 
   .about h2 {
@@ -136,8 +148,9 @@ footer {
     font-size: 1.2rem; /* Slider başlık boyutunu daha da küçült */
   }
 
-  .slider-image {
-    max-height: 200px; /* Mobilde slider yüksekliğini daha da azalt */
+  .image-container {
+    width: 250px; /* Mobilde kapsayıcı genişliğini daha da küçült */
+    height: 250px; /* Mobilde kapsayıcı yüksekliğini daha da küçült */
   }
 
   .about h2 {
