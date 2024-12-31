@@ -30,7 +30,7 @@
 }
 
 .slider-image {
-  max-height: 300px; /* Slider resimlerinin maksimum yüksekliği */
+  max-height: 400px; /* Slider resimlerinin maksimum yüksekliği */
   width: auto; /* Genişliği otomatik ayarla */
   margin: 0 auto; /* Resimleri ortala */
   border-radius: 10px; /* Görsellerin köşelerini yuvarlar */
@@ -43,17 +43,34 @@
   margin-bottom: 20px;
 }
 
-/* Hakkında Bölümü */
-.about {
-  padding: 20px 0;
+/* Carousel Kontrol Butonları */
+.carousel-control-prev,
+.carousel-control-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Buton arka plan rengi */
+  width: 40px; /* Buton genişliği */
+  height: 40px; /* Buton yüksekliği */
+  border-radius: 50%; /* Butonları yuvarlak yap */
+  top: 50%; /* Dikeyde ortala */
+  transform: translateY(-50%);
 }
 
-/* Footer */
-footer {
-  background-color: #6a1b9a; /* Mor tema */
-  color: white;
-  text-align: center;
-  padding: 10px;
+.carousel-control-prev {
+  left: 10px; /* Sol kenara yerleştir */
+}
+
+.carousel-control-next {
+  right: 10px; /* Sağ kenara yerleştir */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  filter: invert(1); /* Ok simgelerini beyaz yap */
+}
+
+/* Manuel Geçiş Butonları */
+.slider .btn-pink {
+  font-size: 1rem;
+  padding: 10px 20px;
 }
 
 /* Mobil Uyumlu Tasarım */
