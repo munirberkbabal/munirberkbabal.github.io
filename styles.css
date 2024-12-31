@@ -24,9 +24,15 @@
   padding: 20px 0;
 }
 
-.carousel-inner img {
-  max-height: 400px; /* Slider yüksekliği */
-  object-fit: cover; /* Görselleri ortalar ve taşmayı önler */
+.carousel-inner {
+  max-width: 800px; /* Slider'ın maksimum genişliği */
+  margin: 0 auto; /* Slider'ı ortala */
+}
+
+.slider-image {
+  max-height: 400px; /* Slider resimlerinin maksimum yüksekliği */
+  width: auto; /* Genişliği otomatik ayarla */
+  margin: 0 auto; /* Resimleri ortala */
   border-radius: 10px; /* Görsellerin köşelerini yuvarlar */
 }
 
@@ -65,7 +71,7 @@ footer {
     font-size: 1.5rem; /* Slider başlık boyutunu küçült */
   }
 
-  .carousel-inner img {
+  .slider-image {
     max-height: 300px; /* Mobilde slider yüksekliğini azalt */
   }
 
@@ -92,7 +98,7 @@ footer {
     font-size: 1.2rem; /* Slider başlık boyutunu daha da küçült */
   }
 
-  .carousel-inner img {
+  .slider-image {
     max-height: 200px; /* Mobilde slider yüksekliğini daha da azalt */
   }
 
