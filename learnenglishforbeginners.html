@@ -41,19 +41,16 @@
             <img src="5.jpg" class="d-block w-100 slider-image" alt="Uygulama Görseli 5">
           </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+        <!-- Önceki Buton -->
+        <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
           <span class="carousel-control-prev-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Önceki</span>
         </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+        <!-- Sonraki Buton -->
+        <button class="carousel-control-next custom-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
           <span class="carousel-control-next-icon" aria-hidden="true"></span>
           <span class="visually-hidden">Sonraki</span>
         </button>
-      </div>
-      <!-- Manuel Geçiş Butonları -->
-      <div class="text-center mt-3">
-        <button class="btn btn-pink me-2" onclick="prevSlide()">Önceki</button>
-        <button class="btn btn-pink" onclick="nextSlide()">Sonraki</button>
       </div>
     </div>
   </section>
@@ -79,17 +76,84 @@
   <!-- Bootstrap JS ve Popper.js -->
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
-  <!-- Özel JS -->
-  <script>
-    function prevSlide() {
-      const carousel = new bootstrap.Carousel(document.getElementById('carouselExample'));
-      carousel.prev();
-    }
+</body>
+</html><!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Learn English for Beginners</title>
+  <!-- Bootstrap CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <!-- Özel Stil -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <!-- Header -->
+  <header class="bg-purple text-white text-center py-5">
+    <div class="container">
+      <img src="Logo.jpg" alt="Uygulama Logosu" class="logo mb-3" width="100">
+      <h1 class="display-4">Learn English for Beginners</h1>
+      <a href="https://github.com/munirberkbabal/munirberkbabal.github.io/raw/refs/heads/main/learnenglishforbeginners.apk" class="btn btn-pink btn-lg">Uygulamayı İndir</a>
+    </div>
+  </header>
 
-    function nextSlide() {
-      const carousel = new bootstrap.Carousel(document.getElementById('carouselExample'));
-      carousel.next();
-    }
-  </script>
+  <!-- Slider -->
+  <section class="slider py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Uygulamadan Kesitler</h2>
+      <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="1.jpg" class="d-block w-100 slider-image" alt="Uygulama Görseli 1">
+          </div>
+          <div class="carousel-item">
+            <img src="2.jpg" class="d-block w-100 slider-image" alt="Uygulama Görseli 2">
+          </div>
+          <div class="carousel-item">
+            <img src="3.jpg" class="d-block w-100 slider-image" alt="Uygulama Görseli 3">
+          </div>
+          <div class="carousel-item">
+            <img src="4.jpg" class="d-block w-100 slider-image" alt="Uygulama Görseli 4">
+          </div>
+          <div class="carousel-item">
+            <img src="5.jpg" class="d-block w-100 slider-image" alt="Uygulama Görseli 5">
+          </div>
+        </div>
+        <!-- Önceki Buton -->
+        <button class="carousel-control-prev custom-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Önceki</span>
+        </button>
+        <!-- Sonraki Buton -->
+        <button class="carousel-control-next custom-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Sonraki</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Hakkında Bölümü -->
+  <section class="about py-5">
+    <div class="container">
+      <h2 class="text-center mb-4">Learn English for Beginners</h2>
+      <p class="text-center">
+        Learn English for Beginners, İngilizce öğrenmek isteyenler için tasarlanmıştır. 
+        Kolay kullanımı ve etkili öğrenme yöntemleriyle dikkat çekmektedir.
+      </p>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-purple text-white text-center py-3">
+    <div class="container">
+      <p>&copy; 2025 Learn English for Beginners. Tüm hakları saklıdır.</p>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS ve Popper.js -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"></script>
 </body>
 </html>
