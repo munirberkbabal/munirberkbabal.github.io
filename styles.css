@@ -27,6 +27,7 @@
 .carousel-inner {
   max-width: 800px; /* Slider'ın maksimum genişliği */
   margin: 0 auto; /* Slider'ı ortala */
+  position: relative;
 }
 
 .slider-image {
@@ -43,22 +44,35 @@
   margin-bottom: 20px;
 }
 
-/* Carousel Kontrol Butonları */
-.carousel-control-prev,
-.carousel-control-next {
-  background-color: rgba(0, 0, 0, 0.5); /* Buton arka plan rengi */
-  width: 40px; /* Buton genişliği */
-  height: 40px; /* Buton yüksekliği */
+/* Özel Slider Butonları */
+.custom-prev,
+.custom-next {
+  width: 50px; /* Buton genişliği */
+  height: 50px; /* Buton yüksekliği */
+  background-color: rgba(255, 255, 255, 0.8); /* Buton arka plan rengi */
+  border: none;
   border-radius: 50%; /* Butonları yuvarlak yap */
-  top: 50%; /* Dikeyde ortala */
+  position: absolute;
+  top: 50%;
   transform: translateY(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.7; /* Buton şeffaflığı */
+  transition: opacity 0.3s ease, background-color 0.3s ease;
 }
 
-.carousel-control-prev {
+.custom-prev:hover,
+.custom-next:hover {
+  opacity: 1; /* Hover'da şeffaflığı kaldır */
+  background-color: rgba(255, 255, 255, 1); /* Hover'da arka plan rengi */
+}
+
+.custom-prev {
   left: 10px; /* Sol kenara yerleştir */
 }
 
-.carousel-control-next {
+.custom-next {
   right: 10px; /* Sağ kenara yerleştir */
 }
 
@@ -67,10 +81,17 @@
   filter: invert(1); /* Ok simgelerini beyaz yap */
 }
 
-/* Manuel Geçiş Butonları */
-.slider .btn-pink {
-  font-size: 1rem;
-  padding: 10px 20px;
+/* Hakkında Bölümü */
+.about {
+  padding: 20px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #6a1b9a; /* Mor tema */
+  color: white;
+  text-align: center;
+  padding: 10px;
 }
 
 /* Mobil Uyumlu Tasarım */
