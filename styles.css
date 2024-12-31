@@ -19,15 +19,17 @@
   height: auto;
 }
 
+/* Slider Stili */
 .slider {
-  height: 60vh; /* Ekranın %60'ını kaplar */
+  padding: 20px 0;
 }
 
 .carousel-inner img {
-  max-height: 100%;
+  max-height: 400px; /* Slider yüksekliği */
   object-fit: cover; /* Görselleri ortalar ve taşmayı önler */
   border-radius: 10px; /* Görsellerin köşelerini yuvarlar */
 }
+
 .slider h2 {
   font-size: 2rem;
   font-weight: bold;
@@ -35,3 +37,70 @@
   margin-bottom: 20px;
 }
 
+/* Hakkında Bölümü */
+.about {
+  padding: 20px 0;
+}
+
+/* Footer */
+footer {
+  background-color: #6a1b9a; /* Mor tema */
+  color: white;
+  text-align: center;
+  padding: 10px;
+}
+
+/* Mobil Uyumlu Tasarım */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 2rem; /* Başlık boyutunu küçült */
+  }
+
+  .btn-pink {
+    font-size: 1rem; /* Buton yazı boyutunu küçült */
+    padding: 10px 20px; /* Buton padding'ini ayarla */
+  }
+
+  .slider h2 {
+    font-size: 1.5rem; /* Slider başlık boyutunu küçült */
+  }
+
+  .carousel-inner img {
+    max-height: 300px; /* Mobilde slider yüksekliğini azalt */
+  }
+
+  .about h2 {
+    font-size: 1.5rem; /* Hakkında başlık boyutunu küçült */
+  }
+
+  .about p {
+    font-size: 0.9rem; /* Hakkında metin boyutunu küçült */
+  }
+}
+
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 1.5rem; /* Başlık boyutunu daha da küçült */
+  }
+
+  .btn-pink {
+    font-size: 0.9rem; /* Buton yazı boyutunu daha da küçült */
+    padding: 8px 16px; /* Buton padding'ini ayarla */
+  }
+
+  .slider h2 {
+    font-size: 1.2rem; /* Slider başlık boyutunu daha da küçült */
+  }
+
+  .carousel-inner img {
+    max-height: 200px; /* Mobilde slider yüksekliğini daha da azalt */
+  }
+
+  .about h2 {
+    font-size: 1.2rem; /* Hakkında başlık boyutunu daha da küçült */
+  }
+
+  .about p {
+    font-size: 0.8rem; /* Hakkında metin boyutunu daha da küçült */
+  }
+}
