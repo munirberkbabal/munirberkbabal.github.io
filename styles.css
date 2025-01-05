@@ -32,8 +32,8 @@
 
 /* Resim Kapsayıcısı */
 .image-container {
-  width: 400px; /* Sabit genişlik */
-  height: 400px; /* Sabit yükseklik */
+  width: 100%; /* Kapsayıcı genişliği */
+  height: 500px; /* Sabit yükseklik */
   margin: 0 auto; /* Ortala */
   display: flex;
   align-items: center;
@@ -45,7 +45,7 @@
 .slider-image {
   max-width: 100%; /* Resmin genişliği kapsayıcıya sığsın */
   max-height: 100%; /* Resmin yüksekliği kapsayıcıya sığsın */
-  object-fit: cover; /* Resmi orantılı şekilde kırp */
+  object-fit: contain; /* Resmi orantılı şekilde göster, kırpma */
 }
 
 .slider h2 {
@@ -121,7 +121,6 @@ footer {
   }
 
   .image-container {
-    width: 300px; /* Mobilde kapsayıcı genişliğini küçült */
     height: 300px; /* Mobilde kapsayıcı yüksekliğini küçült */
   }
 
@@ -149,8 +148,7 @@ footer {
   }
 
   .image-container {
-    width: 250px; /* Mobilde kapsayıcı genişliğini daha da küçült */
-    height: 250px; /* Mobilde kapsayıcı yüksekliğini daha da küçült */
+    height: 200px; /* Mobilde kapsayıcı yüksekliğini daha da küçült */
   }
 
   .about h2 {
