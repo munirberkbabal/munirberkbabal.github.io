@@ -55,6 +55,24 @@
   margin-bottom: 20px;
 }
 
+/* Video Bölümü */
+.video {
+  padding: 20px 0;
+}
+
+.video-container {
+  max-width: 800px; /* Video kapsayıcısının maksimum genişliği */
+  margin: 0 auto; /* Ortala */
+  border-radius: 10px; /* Köşeleri yuvarlak yap */
+  overflow: hidden; /* Taşan kısımları gizle */
+}
+
+video {
+  width: 100%; /* Video genişliği */
+  height: auto; /* Video yüksekliği otomatik */
+  display: block; /* Blok öğe olarak ayarla */
+}
+
 /* Özel Slider Butonları */
 .custom-prev,
 .custom-next {
@@ -122,6 +140,10 @@ footer {
 
   .image-container {
     height: 300px; /* Mobilde kapsayıcı yüksekliğini küçült */
+  }
+
+  .video-container {
+    max-width: 100%; /* Video kapsayıcısını tam genişlik yap */
   }
 
   .about h2 {
