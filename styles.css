@@ -65,12 +65,32 @@
   margin: 0 auto; /* Ortala */
   border-radius: 10px; /* Köşeleri yuvarlak yap */
   overflow: hidden; /* Taşan kısımları gizle */
+  position: relative;
 }
 
-video {
+.custom-video {
   width: 100%; /* Video genişliği */
   height: auto; /* Video yüksekliği otomatik */
   display: block; /* Blok öğe olarak ayarla */
+  border-radius: 10px; /* Köşeleri yuvarlak yap */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Gölge efekti */
+}
+
+/* Video Kontrolleri için Özel Stil */
+.custom-video::-webkit-media-controls-panel {
+  background-color: rgba(255, 255, 255, 0.8); /* Kontrol paneli arka plan rengi */
+  border-radius: 10px; /* Köşeleri yuvarlak yap */
+}
+
+.custom-video::-webkit-media-controls-play-button,
+.custom-video::-webkit-media-controls-mute-button {
+  background-color: #ff4081; /* Buton rengi */
+  border-radius: 50%; /* Butonları yuvarlak yap */
+}
+
+.custom-video::-webkit-media-controls-current-time-display,
+.custom-video::-webkit-media-controls-time-remaining-display {
+  color: #4a4a4a; /* Zaman bilgisi rengi */
 }
 
 /* Özel Slider Butonları */
