@@ -1,0 +1,1486 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
+    <meta name="description"
+          content="Münir Berk BABAL - Flutter, Python ve mobil uygulama geliştirici portfolyosu.">
+
+    <meta name="robots" content="index, follow">
+
+    <title>Münir Berk BABAL | Developer</title>
+
+    <style>
+        :root {
+            --bg: #07111f;
+            --bg-soft: #0b1729;
+            --card: rgba(17, 31, 51, 0.72);
+            --card-hover: rgba(24, 43, 68, 0.92);
+
+            --text: #f4f7fb;
+            --muted: #9fb0c3;
+
+            --primary: #6d8cff;
+            --secondary: #56e0d0;
+
+            --border: rgba(255,255,255,.09);
+
+            --shadow:
+                0 25px 60px rgba(0,0,0,.28);
+
+            --radius: 24px;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+
+            font-family:
+                Inter,
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+
+            color: var(--text);
+
+            background:
+                radial-gradient(
+                    circle at 15% 10%,
+                    rgba(75, 115, 255, .16),
+                    transparent 28%
+                ),
+                radial-gradient(
+                    circle at 85% 12%,
+                    rgba(65, 224, 206, .10),
+                    transparent 25%
+                ),
+                var(--bg);
+
+            line-height: 1.65;
+        }
+
+        a {
+            color: inherit;
+            text-decoration: none;
+        }
+
+        .container {
+            width: min(1120px, calc(100% - 36px));
+            margin: auto;
+        }
+
+        /* NAV */
+
+        nav {
+            position: sticky;
+            top: 0;
+            z-index: 100;
+
+            border-bottom: 1px solid var(--border);
+
+            background:
+                rgba(7, 17, 31, .80);
+
+            backdrop-filter: blur(18px);
+        }
+
+        .nav-inner {
+            min-height: 72px;
+
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            gap: 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 11px;
+
+            font-size: 18px;
+            font-weight: 800;
+        }
+
+        .logo-icon {
+            width: 38px;
+            height: 38px;
+
+            display: grid;
+            place-items: center;
+
+            border-radius: 12px;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    var(--primary),
+                    var(--secondary)
+                );
+
+            color: #06101c;
+
+            font-weight: 900;
+        }
+
+        .nav-links {
+            display: flex;
+            gap: 24px;
+
+            color: var(--muted);
+
+            font-size: 14px;
+            font-weight: 600;
+        }
+
+        .nav-links a:hover {
+            color: white;
+        }
+
+        /* HERO */
+
+        .hero {
+            min-height: 78vh;
+
+            display: flex;
+            align-items: center;
+
+            padding: 90px 0 70px;
+        }
+
+        .hero-grid {
+            display: grid;
+
+            grid-template-columns:
+                minmax(0, 1.25fr)
+                minmax(300px, .75fr);
+
+            gap: 70px;
+            align-items: center;
+        }
+
+        .availability {
+            display: inline-flex;
+            align-items: center;
+            gap: 9px;
+
+            margin-bottom: 24px;
+
+            padding: 8px 13px;
+
+            border:
+                1px solid rgba(86,224,208,.23);
+
+            border-radius: 999px;
+
+            color: #8cf3e7;
+
+            background:
+                rgba(86,224,208,.07);
+
+            font-size: 13px;
+            font-weight: 700;
+        }
+
+        .dot {
+            width: 8px;
+            height: 8px;
+
+            border-radius: 50%;
+
+            background: #56e0d0;
+
+            box-shadow:
+                0 0 12px #56e0d0;
+        }
+
+        h1 {
+            max-width: 760px;
+
+            margin: 0;
+
+            font-size:
+                clamp(3rem, 7.5vw, 6.5rem);
+
+            line-height: .98;
+
+            letter-spacing: -.065em;
+        }
+
+        .gradient-text {
+            color: transparent;
+
+            background:
+                linear-gradient(
+                    100deg,
+                    #8fa5ff,
+                    #56e0d0
+                );
+
+            -webkit-background-clip: text;
+            background-clip: text;
+        }
+
+        .hero-description {
+            max-width: 700px;
+
+            margin: 28px 0 0;
+
+            color: var(--muted);
+
+            font-size:
+                clamp(1.02rem, 2vw, 1.2rem);
+        }
+
+        .hero-actions {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 13px;
+
+            margin-top: 34px;
+        }
+
+        .button {
+            min-height: 50px;
+
+            display: inline-flex;
+
+            align-items: center;
+            justify-content: center;
+
+            padding: 0 20px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius: 14px;
+
+            font-weight: 750;
+
+            transition: .2s ease;
+        }
+
+        .button-primary {
+            border: 0;
+
+            color: #07111f;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    #8fa5ff,
+                    #56e0d0
+                );
+        }
+
+        .button-secondary {
+            background:
+                rgba(255,255,255,.04);
+        }
+
+        .button:hover {
+            transform:
+                translateY(-2px);
+        }
+
+        /* HERO CODE CARD */
+
+        .code-card {
+            overflow: hidden;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            background:
+                rgba(8, 19, 33, .76);
+
+            box-shadow:
+                var(--shadow);
+        }
+
+        .code-header {
+            display: flex;
+            gap: 7px;
+
+            padding: 16px;
+
+            border-bottom:
+                1px solid var(--border);
+        }
+
+        .circle {
+            width: 10px;
+            height: 10px;
+
+            border-radius: 50%;
+
+            background:
+                rgba(255,255,255,.17);
+        }
+
+        .code-content {
+            padding: 26px;
+
+            color: #afbdd0;
+
+            font-family:
+                "SFMono-Regular",
+                Consolas,
+                "Liberation Mono",
+                monospace;
+
+            font-size: 14px;
+            line-height: 1.9;
+        }
+
+        .c-blue {
+            color: #91aaff;
+        }
+
+        .c-green {
+            color: #56e0d0;
+        }
+
+        .c-yellow {
+            color: #ffc875;
+        }
+
+        /* GENERAL */
+
+        section {
+            padding: 90px 0;
+        }
+
+        .section-label {
+            margin-bottom: 8px;
+
+            color: var(--secondary);
+
+            text-transform: uppercase;
+
+            letter-spacing: .13em;
+
+            font-size: 12px;
+
+            font-weight: 800;
+        }
+
+        .section-title {
+            margin:
+                0 0 15px;
+
+            font-size:
+                clamp(2rem, 4vw, 3.2rem);
+
+            letter-spacing:
+                -.04em;
+        }
+
+        .section-description {
+            max-width: 700px;
+
+            margin:
+                0 0 40px;
+
+            color: var(--muted);
+        }
+
+        /* ABOUT */
+
+        .about-grid {
+            display: grid;
+
+            grid-template-columns:
+                1fr 1fr;
+
+            gap: 25px;
+        }
+
+        .about-card {
+            padding: 30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            background:
+                var(--card);
+        }
+
+        .about-card h3 {
+            margin-top: 0;
+        }
+
+        .about-card p {
+            margin-bottom: 0;
+
+            color: var(--muted);
+        }
+
+        /* SKILLS */
+
+        .skills {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 10px;
+        }
+
+        .skill {
+            padding: 10px 14px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                12px;
+
+            color: #d8e1ec;
+
+            background:
+                rgba(255,255,255,.035);
+
+            font-size: 14px;
+
+            transition: .2s ease;
+        }
+
+        .skill:hover {
+            border-color:
+                rgba(109,140,255,.5);
+
+            background:
+                rgba(109,140,255,.09);
+        }
+
+        /* PROJECTS */
+
+        .projects {
+            display: grid;
+
+            grid-template-columns:
+                repeat(2, 1fr);
+
+            gap: 20px;
+        }
+
+        .project-card {
+            position: relative;
+
+            overflow: hidden;
+
+            min-height: 330px;
+
+            display: flex;
+            flex-direction: column;
+
+            padding: 30px;
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                var(--radius);
+
+            background:
+                var(--card);
+
+            transition:
+                transform .25s ease,
+                background .25s ease,
+                border .25s ease;
+        }
+
+        .project-card:hover {
+            transform:
+                translateY(-5px);
+
+            border-color:
+                rgba(109,140,255,.35);
+
+            background:
+                var(--card-hover);
+        }
+
+        .project-number {
+            color:
+                rgba(255,255,255,.24);
+
+            font-size: 13px;
+
+            font-weight: 800;
+        }
+
+        .project-card h3 {
+            margin:
+                28px 0 10px;
+
+            font-size: 27px;
+
+            letter-spacing: -.03em;
+        }
+
+        .project-card p {
+            color: var(--muted);
+        }
+
+        .project-tags {
+            display: flex;
+            flex-wrap: wrap;
+
+            gap: 8px;
+
+            margin:
+                10px 0 25px;
+        }
+
+        .project-tag {
+            padding:
+                5px 9px;
+
+            border-radius:
+                8px;
+
+            color:
+                #abc0ff;
+
+            background:
+                rgba(109,140,255,.09);
+
+            font-size:
+                12px;
+
+            font-weight: 700;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 17px;
+
+            margin-top: auto;
+
+            font-size: 14px;
+
+            font-weight: 750;
+        }
+
+        .project-links a {
+            color:
+                var(--secondary);
+        }
+
+        /* EXPERIENCE */
+
+        .timeline {
+            border-left:
+                1px solid var(--border);
+
+            margin-left: 8px;
+
+            padding-left: 30px;
+        }
+
+        .timeline-item {
+            position: relative;
+
+            padding:
+                0 0 42px;
+        }
+
+        .timeline-item::before {
+            content: "";
+
+            position: absolute;
+
+            left: -37px;
+            top: 7px;
+
+            width: 12px;
+            height: 12px;
+
+            border-radius: 50%;
+
+            background:
+                var(--primary);
+
+            box-shadow:
+                0 0 14px
+                rgba(109,140,255,.7);
+        }
+
+        .timeline-date {
+            color:
+                var(--secondary);
+
+            font-size: 13px;
+
+            font-weight: 750;
+        }
+
+        .timeline-item h3 {
+            margin:
+                5px 0;
+        }
+
+        .timeline-item p {
+            max-width: 720px;
+
+            margin: 0;
+
+            color:
+                var(--muted);
+        }
+
+        /* CONTACT */
+
+        .contact-card {
+            padding:
+                clamp(30px, 6vw, 65px);
+
+            border:
+                1px solid var(--border);
+
+            border-radius:
+                30px;
+
+            text-align: center;
+
+            background:
+                linear-gradient(
+                    135deg,
+                    rgba(109,140,255,.12),
+                    rgba(86,224,208,.07)
+                );
+        }
+
+        .contact-card h2 {
+            margin:
+                0 auto 15px;
+
+            font-size:
+                clamp(2rem, 5vw, 4rem);
+
+            letter-spacing:
+                -.05em;
+        }
+
+        .contact-card p {
+            max-width:
+                620px;
+
+            margin:
+                0 auto 27px;
+
+            color:
+                var(--muted);
+        }
+
+        /* FOOTER */
+
+        footer {
+            padding:
+                35px 0;
+
+            border-top:
+                1px solid var(--border);
+
+            color:
+                var(--muted);
+
+            font-size:
+                13px;
+        }
+
+        .footer-inner {
+            display: flex;
+
+            justify-content:
+                space-between;
+
+            gap: 20px;
+
+            flex-wrap: wrap;
+        }
+
+        .footer-links {
+            display: flex;
+            gap: 16px;
+        }
+
+        .footer-links a:hover {
+            color: white;
+        }
+
+        /* MOBILE */
+
+        @media
+        (max-width: 800px) {
+
+            .nav-links {
+                display: none;
+            }
+
+            .hero {
+                min-height: auto;
+            }
+
+            .hero-grid {
+                grid-template-columns: 1fr;
+                gap: 45px;
+            }
+
+            .projects,
+            .about-grid {
+                grid-template-columns: 1fr;
+            }
+
+            section {
+                padding:
+                    65px 0;
+            }
+        }
+
+    </style>
+</head>
+
+<body>
+
+<nav>
+
+    <div class="container nav-inner">
+
+        <a class="logo" href="#home">
+
+            <div class="logo-icon">
+                MB
+            </div>
+
+            <span>
+                Münir Berk BABAL
+            </span>
+
+        </a>
+
+        <div class="nav-links">
+
+            <a href="#about">
+                Hakkımda
+            </a>
+
+            <a href="#projects">
+                Projeler
+            </a>
+
+            <a href="#experience">
+                Deneyim
+            </a>
+
+            <a href="#contact">
+                İletişim
+            </a>
+
+        </div>
+
+    </div>
+
+</nav>
+
+
+<header
+    class="hero"
+    id="home"
+>
+
+    <div class="container hero-grid">
+
+        <div>
+
+            <div class="availability">
+
+                <span class="dot"></span>
+
+                Software Developer
+
+            </div>
+
+            <h1>
+
+                Mobil uygulamalar
+
+                <span class="gradient-text">
+                    geliştiriyorum.
+                </span>
+
+            </h1>
+
+            <p class="hero-description">
+
+                Flutter ve Python ağırlıklı çalışan,
+                mobil uygulamalar, yazılım projeleri,
+                veri analizi ve yapay zekâ tabanlı
+                sistemler geliştiren bir yazılım
+                geliştiricisiyim.
+
+            </p>
+
+            <div class="hero-actions">
+
+                <a
+                    class="button button-primary"
+                    href="#projects"
+                >
+                    Projelerimi Gör
+                </a>
+
+                <a
+                    class="button button-secondary"
+                    href="https://github.com/munirberkbabal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub ↗
+                </a>
+
+            </div>
+
+        </div>
+
+
+        <div class="code-card">
+
+            <div class="code-header">
+
+                <span class="circle"></span>
+                <span class="circle"></span>
+                <span class="circle"></span>
+
+            </div>
+
+            <div class="code-content">
+
+                <div>
+                    <span class="c-blue">class</span>
+                    Developer {
+                </div>
+
+                <br>
+
+                <div>
+                    &nbsp;&nbsp;name:
+                    <span class="c-green">
+                        "Münir Berk BABAL"
+                    </span>;
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;focus: [
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="c-yellow">
+                        "Flutter"
+                    </span>,
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="c-yellow">
+                        "Python"
+                    </span>,
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="c-yellow">
+                        "Mobile Apps"
+                    </span>,
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    <span class="c-yellow">
+                        "AI & Data"
+                    </span>
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;];
+                </div>
+
+                <br>
+
+                <div>
+                    &nbsp;&nbsp;build() {
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;&nbsp;&nbsp;
+                    return
+                    <span class="c-green">
+                        "useful products"
+                    </span>;
+                </div>
+
+                <div>
+                    &nbsp;&nbsp;}
+                </div>
+
+                <div>
+                    }
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</header>
+
+
+<main>
+
+<section id="about">
+
+    <div class="container">
+
+        <div class="section-label">
+            Hakkımda
+        </div>
+
+        <h2 class="section-title">
+            Yazılımı ürün haline getirmeyi seviyorum.
+        </h2>
+
+        <p class="section-description">
+
+            Yönetim Bilişim Sistemleri altyapımı
+            yazılım geliştirme ve Bilgisayar
+            Mühendisliği alanındaki çalışmalarla
+            birleştiriyorum. Özellikle mobil ürünler,
+            eğitim teknolojileri, veri analizi ve
+            yapay zekâ uygulamaları üzerinde
+            çalışıyorum.
+
+        </p>
+
+
+        <div class="about-grid">
+
+            <div class="about-card">
+
+                <h3>
+                    🎓 Eğitim
+                </h3>
+
+                <p>
+                    Yönetim Bilişim Sistemleri
+                    lisans mezunuyum. Bilgisayar
+                    Mühendisliği alanında yüksek
+                    lisans çalışmalarımı
+                    sürdürüyorum.
+                </p>
+
+            </div>
+
+
+            <div class="about-card">
+
+                <h3>
+                    💻 Odak Alanlarım
+                </h3>
+
+                <p>
+                    Mobil uygulama geliştirme,
+                    Flutter, Python, backend
+                    sistemleri, veri analizi,
+                    yapay zekâ ve kullanıcı
+                    odaklı yazılım ürünleri.
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section>
+
+    <div class="container">
+
+        <div class="section-label">
+            Teknolojiler
+        </div>
+
+        <h2 class="section-title">
+            Kullandığım araçlar
+        </h2>
+
+        <div class="skills">
+
+            <span class="skill">Flutter</span>
+            <span class="skill">Dart</span>
+            <span class="skill">Python</span>
+            <span class="skill">Firebase</span>
+            <span class="skill">Supabase</span>
+            <span class="skill">SQL</span>
+            <span class="skill">PostgreSQL</span>
+            <span class="skill">SQLite</span>
+            <span class="skill">JavaScript</span>
+            <span class="skill">Node.js</span>
+            <span class="skill">HTML</span>
+            <span class="skill">CSS</span>
+            <span class="skill">Git</span>
+            <span class="skill">GitHub</span>
+            <span class="skill">Godot</span>
+            <span class="skill">Firebase</span>
+            <span class="skill">Pandas</span>
+            <span class="skill">NLP</span>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="projects">
+
+    <div class="container">
+
+        <div class="section-label">
+            Seçili Projeler
+        </div>
+
+        <h2 class="section-title">
+            Ürettiklerim
+        </h2>
+
+        <p class="section-description">
+
+            Mobil uygulamalardan veri analizi
+            projelerine kadar geliştirdiğim
+            çalışmaların bir bölümü.
+
+        </p>
+
+
+        <div class="projects">
+
+
+            <!-- KPSS HAZIRLAN -->
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    PROJECT / 01
+                </span>
+
+                <h3>
+                    KPSS Hazırlan
+                </h3>
+
+                <p>
+
+                    KPSS adaylarının konu çalışması,
+                    test çözümü, yanlış tekrarları
+                    ve çalışma süreçlerini tek
+                    uygulamada yönetmesini amaçlayan
+                    mobil eğitim uygulaması.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Flutter
+                    </span>
+
+                    <span class="project-tag">
+                        Dart
+                    </span>
+
+                    <span class="project-tag">
+                        Mobile
+                    </span>
+
+                    <span class="project-tag">
+                        EdTech
+                    </span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <a
+                        href="https://play.google.com/store/apps/details?id=com.kpsshazirlan.app"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                    >
+                        Google Play ↗
+                    </a>
+
+                    <a
+                        href="https://munirberkbabal.github.io/kpss-hazirlan-privacy/"
+                        target="_blank"
+                    >
+                        Privacy ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- BOA -->
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    PROJECT / 02
+                </span>
+
+                <h3>
+                    BOA
+                </h3>
+
+                <p>
+
+                    Sporcuların performans,
+                    devam ve analiz süreçlerinin
+                    takip edilebilmesi için
+                    geliştirilen oyuncu analiz
+                    platformu.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Flutter
+                    </span>
+
+                    <span class="project-tag">
+                        Firebase
+                    </span>
+
+                    <span class="project-tag">
+                        Analytics
+                    </span>
+
+                    <span class="project-tag">
+                        SportsTech
+                    </span>
+
+                </div>
+
+            </article>
+
+
+            <!-- DONER EMPIRE -->
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    PROJECT / 03
+                </span>
+
+                <h3>
+                    Doner Empire
+                </h3>
+
+                <p>
+
+                    Döner işletmesi yönetimi
+                    konsepti üzerine geliştirilen
+                    mobil işletme simülasyonu ve
+                    tycoon oyunu.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Game
+                    </span>
+
+                    <span class="project-tag">
+                        Mobile
+                    </span>
+
+                    <span class="project-tag">
+                        Simulation
+                    </span>
+
+                </div>
+
+                <div class="project-links">
+
+                    <a
+                        href="https://munirberkbabal.github.io/doner-empire-privacy/"
+                        target="_blank"
+                    >
+                        Privacy ↗
+                    </a>
+
+                </div>
+
+            </article>
+
+
+            <!-- RESEARCH -->
+
+            <article class="project-card">
+
+                <span class="project-number">
+                    RESEARCH / 04
+                </span>
+
+                <h3>
+                    NLP & Sentiment Analysis
+                </h3>
+
+                <p>
+
+                    Mobil uygulama kullanıcı
+                    yorumları üzerinde duygu,
+                    risk algısı ve metinsel
+                    uyumsuzlukların analiz
+                    edilmesine yönelik akademik
+                    çalışmalar.
+
+                </p>
+
+                <div class="project-tags">
+
+                    <span class="project-tag">
+                        Python
+                    </span>
+
+                    <span class="project-tag">
+                        NLP
+                    </span>
+
+                    <span class="project-tag">
+                        Transformers
+                    </span>
+
+                    <span class="project-tag">
+                        Data Analysis
+                    </span>
+
+                </div>
+
+            </article>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="experience">
+
+    <div class="container">
+
+        <div class="section-label">
+            Deneyim
+        </div>
+
+        <h2 class="section-title">
+            Deneyim & çalışmalar
+        </h2>
+
+
+        <div class="timeline">
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2025 — Günümüz
+                </div>
+
+                <h3>
+                    Berk Software
+                </h3>
+
+                <p>
+
+                    Mobil uygulama,
+                    yazılım ve dijital ürün
+                    geliştirme çalışmaları.
+
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2024 — Günümüz
+                </div>
+
+                <h3>
+                    Bilgisayar Mühendisliği
+                    Yüksek Lisans
+                </h3>
+
+                <p>
+
+                    Yazılım, veri analizi,
+                    yapay zekâ ve bilgisayar
+                    mühendisliği alanlarında
+                    akademik çalışmalar.
+
+                </p>
+
+            </div>
+
+
+            <div class="timeline-item">
+
+                <div class="timeline-date">
+                    2019 — 2024
+                </div>
+
+                <h3>
+                    Yönetim Bilişim Sistemleri
+                </h3>
+
+                <p>
+
+                    Yazılım geliştirme,
+                    veri tabanları,
+                    bilgi sistemleri ve
+                    işletme teknolojileri
+                    üzerine lisans eğitimi.
+
+                </p>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<section id="contact">
+
+    <div class="container">
+
+        <div class="contact-card">
+
+            <div class="section-label">
+                İletişim
+            </div>
+
+            <h2>
+                Bir proje konuşalım.
+            </h2>
+
+            <p>
+
+                Yazılım geliştirme,
+                mobil uygulamalar,
+                iş birlikleri veya projeler
+                hakkında iletişime geçebilirsiniz.
+
+            </p>
+
+            <div class="hero-actions"
+                 style="justify-content:center">
+
+                <a
+                    class="button button-primary"
+                    href="mailto:munirberkbabal@gmail.com"
+                >
+                    E-posta Gönder
+                </a>
+
+                <a
+                    class="button button-secondary"
+                    href="https://github.com/munirberkbabal"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                >
+                    GitHub
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+</main>
+
+
+<footer>
+
+    <div class="container footer-inner">
+
+        <span>
+            © 2026 Münir Berk BABAL
+        </span>
+
+        <div class="footer-links">
+
+            <a
+                href="https://github.com/munirberkbabal"
+                target="_blank"
+            >
+                GitHub
+            </a>
+
+            <a
+                href="https://munirberkbabal.github.io/kpss-hazirlan-privacy/"
+            >
+                KPSS Privacy
+            </a>
+
+            <a
+                href="https://munirberkbabal.github.io/doner-empire-privacy/"
+            >
+                Doner Empire Privacy
+            </a>
+
+        </div>
+
+    </div>
+
+</footer>
+
+</body>
+</html>
