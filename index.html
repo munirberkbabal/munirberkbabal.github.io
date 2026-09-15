@@ -62,7 +62,10 @@
         }
     </style>
 </head>
-<body class="min-h-full ambient-glow flex flex-col justify-between items-center p-4 sm:p-6 selection:bg-cyan-500 selection:text-slate-950">
+<body class="min-h-full ambient-glow flex flex-col justify-between items-center p-4 sm:p-6 selection:bg-cyan-500 selection:text-slate-950 relative overflow-x-hidden">
+
+    <!-- Background Falling Snow Canvas -->
+    <canvas id="snowCanvas" class="fixed inset-0 pointer-events-none z-0"></canvas>
 
     <!-- Toast Feedback Notification -->
     <div id="toast" class="fixed top-6 z-50 transform -translate-y-12 opacity-0 pointer-events-none transition-all duration-300 flex items-center gap-2.5 px-4 py-2.5 rounded-full bg-slate-900/95 border border-cyan-500/40 text-xs font-mono text-cyan-300 shadow-2xl backdrop-blur-md">
@@ -73,7 +76,7 @@
     </div>
 
     <!-- Header Spacer / Minimal Status Bar -->
-    <header class="w-full max-w-lg pt-4 sm:pt-8 flex items-center justify-between text-xs font-mono text-slate-400">
+    <header class="w-full max-w-lg pt-4 sm:pt-8 flex items-center justify-between text-xs font-mono text-slate-400 relative z-10">
         <div class="flex items-center gap-2">
             <span class="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
             <span class="text-slate-300">Berk Yazılım</span>
@@ -82,7 +85,7 @@
     </header>
 
     <!-- Main Welcome Card -->
-    <main class="w-full max-w-lg my-auto py-8">
+    <main class="w-full max-w-lg my-auto py-8 relative z-10">
         <div class="glass-card rounded-3xl p-7 sm:p-10 shadow-2xl relative overflow-hidden text-center space-y-6">
             
             <!-- Glowing top line accent -->
@@ -262,7 +265,7 @@
     </main>
 
     <!-- Minimal Footer -->
-    <footer class="w-full max-w-lg pb-4 sm:pb-8 text-center text-xs text-slate-500 font-mono space-y-1">
+    <footer class="w-full max-w-lg pb-4 sm:pb-8 text-center text-xs text-slate-500 font-mono space-y-1 relative z-10">
         <p>© 2026 Berk Yazılım — Münir Berk BABAL</p>
         <p class="text-[11px] text-slate-600">Bilecik & Dünya geneline uzaktan yazılım çözümleri</p>
     </footer>
@@ -400,6 +403,74 @@
         document.addEventListener('keydown', function(e) {
             if (e.key === 'Escape') closeEmailModal();
         });
+
+        // Hafif ve Akıcı Kar Yağışı Animasyonu
+        (function() {
+            const canvas = document.getElementById('snowCanvas');
+            if (!canvas) return;
+            const ctx = canvas.getContext('2d');
+            let width = 0, height = 0;
+            let snowflakes = [];
+
+            function resize() {
+                width = canvas.width = window.innerWidth;
+                height = canvas.height = window.innerHeight;
+            }
+
+            function createSnowflakes() {
+                // Ekran genişliğine göre hafif sayıda tanecik (mobil/masaüstü dengesi)
+                const count = Math.min(Math.floor(window.innerWidth / 14), 85);
+                snowflakes = [];
+                for (let i = 0; i < count; i++) {
+                    snowflakes.push({
+                        x: Math.random() * width,
+                        y: Math.random() * height,
+                        radius: Math.random() * 2.2 + 0.8,
+                        density: Math.random() * 0.75 + 0.45,
+                        opacity: Math.random() * 0.55 + 0.25,
+                        swaySpeed: Math.random() * 0.02 + 0.008,
+                        swayAngle: Math.random() * Math.PI * 2
+                    });
+                }
+            }
+
+            function updateAndDraw() {
+                ctx.clearRect(0, 0, width, height);
+
+                for (let i = 0; i < snowflakes.length; i++) {
+                    const f = snowflakes[i];
+                    f.swayAngle += f.swaySpeed;
+                    f.y += f.density;
+                    f.x += Math.sin(f.swayAngle) * 0.65;
+
+                    // Ekranın altına ulaştığında yukarıdan yeniden başlat
+                    if (f.y > height + 6) {
+                        f.y = -6;
+                        f.x = Math.random() * width;
+                    }
+                    if (f.x > width + 6) f.x = -6;
+                    else if (f.x < -6) f.x = width + 6;
+
+                    ctx.beginPath();
+                    ctx.arc(f.x, f.y, f.radius, 0, Math.PI * 2, false);
+                    ctx.fillStyle = `rgba(224, 242, 254, ${f.opacity})`;
+                    ctx.shadowBlur = f.radius > 2 ? 6 : 2;
+                    ctx.shadowColor = 'rgba(6, 182, 212, 0.45)';
+                    ctx.fill();
+                }
+
+                requestAnimationFrame(updateAndDraw);
+            }
+
+            window.addEventListener('resize', () => {
+                resize();
+                createSnowflakes();
+            });
+
+            resize();
+            createSnowflakes();
+            requestAnimationFrame(updateAndDraw);
+        })();
     </script>
 </body>
 </html>
